@@ -97,7 +97,6 @@ class _HomeScreenState extends State<GauUpcharScreen> {
   }
 
   void openCheckout(double amount) async {
-    print('hello1');
     var options = {
       'key': 'rzp_test_1DP5mmOlF5G5ag',
       'amount': (amount*100).toInt(),
@@ -111,10 +110,8 @@ class _HomeScreenState extends State<GauUpcharScreen> {
     };
 
     try {
-      print('hello2');
       _razorpay.open(options);
     } catch (e) {
-      print('hello3');
       debugPrint('Error: e');
     }
   }
